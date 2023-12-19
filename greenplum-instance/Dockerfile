@@ -22,7 +22,7 @@ RUN --mount=type=cache,target=/root/.cache/go-build \
     ./cmd/waitForKnownHosts
 
 # build greenplum-instance image from here
-FROM gcr.io/plaidcloud-build/greenplum-pxf:latest
+FROM gcr.io/plaidcloud-build/greenplum-pxf-gp6:latest
 
 # remove gppkg because it's misleading to users in the kubernetes environment
 RUN rm -f /usr/local/greenplum-db/bin/gppkg
