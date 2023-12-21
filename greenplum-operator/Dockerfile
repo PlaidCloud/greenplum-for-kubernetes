@@ -1,7 +1,6 @@
 # syntax = docker/dockerfile:experimental
 FROM golang:1.19 as build-in-docker
 
-
 COPY greenplum-operator/ /greenplum-for-kubernetes/greenplum-operator/
 COPY pkg/ /greenplum-for-kubernetes/pkg/
 COPY tools/ /greenplum-for-kubernetes/tools/
