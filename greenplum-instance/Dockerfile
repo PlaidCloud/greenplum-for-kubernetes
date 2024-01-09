@@ -87,10 +87,10 @@ RUN wget https://github.com/krallin/tini/releases/download/v0.19.0/tini_0.19.0-a
     rm tini_0.19.0-amd64.deb
 ENTRYPOINT ["/usr/bin/tini", "--"]
 
-USER gpadmin
-
 # Make sure there's an en_US.UTF-8 locale
 RUN localedef -i en_US -f UTF-8 en_US.UTF-8
+
+USER gpadmin
 
 # USER env is referenced by `gpconfig`, `gpcheckcat`, `gpssh`, `gpscp`, `gpinitsegment`,
 # and `gpload` utilities through `os.environ.get('USER')`
