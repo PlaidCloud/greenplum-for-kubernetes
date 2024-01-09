@@ -93,6 +93,7 @@ USER gpadmin
 # and `gpload` utilities through `os.environ.get('USER')`
 ENV USER=gpadmin
 ENV PGPORT=5432
+ENV LC_ALL=en_US.UTF-8
 WORKDIR /home/gpadmin
 
 # TODO update the deploy.sh etc. to only depends on /tools instead of /home/gpadmin/tools
